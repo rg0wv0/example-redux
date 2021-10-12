@@ -5,7 +5,8 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
-  SafeAreaView
+  SafeAreaView,
+  StatusBar
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -119,6 +120,7 @@ export default function BooksList() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#1E1B26' }}>
+      <StatusBar barStyle="light-content" />
       <View style={{ flex: 1, paddingHorizontal: 16 }}>
         <Text style={{ color: 'white', fontSize: 22 }}>Bestsellers</Text>
         <View style={{ flex: 1, marginTop: 8 }}>

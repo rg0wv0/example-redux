@@ -5,7 +5,8 @@ import {
   View,
   FlatList,
   TouchableOpacity,
-  Image
+  Image,
+  StatusBar
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -97,8 +98,9 @@ export default function BookmarksList() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#1E1B26' }}>
+      <StatusBar barStyle="light-content" />
       <View style={{ flex: 1, paddingHorizontal: 16 }}>
-        <Text style={{ color: 'white', fontSize: 22 }}>Bookmarks</Text>
+        <Text style={{ color: 'white', fontSize: 22}}>Bookmarks</Text>
         <View style={{ flex: 1, marginTop: 8 }}>
           {bookmarks.length === 0 ? (
             <Text style={{ color: '#64676D', fontSize: 18 }}>
